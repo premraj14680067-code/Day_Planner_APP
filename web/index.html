@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <base href="/">
+
   <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Day Planner App">
+
   <title>Day Planner</title>
 </head>
 <body>
+  <script src="flutter.js" defer></script>
   <script>
-    // Placeholder file to satisfy Flutter
+    window.addEventListener('load', function(ev) {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: null,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
